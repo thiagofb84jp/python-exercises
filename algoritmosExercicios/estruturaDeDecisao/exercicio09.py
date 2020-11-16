@@ -15,4 +15,4 @@ if a > b:
 if b > c:
     b, c = c, b
 
-print('A ordem decrescente é: {}, {} e {}'.format(a, b, c)) 
+print('A ordem decrescente é: {}, {} e {}'.format(a, b, c))
