@@ -1,11 +1,10 @@
 """
 Shebang class (you should use this):
 #! python
+#! python C:\python-udemy\fundamentosProjetos
 """
 
-#! python C:\python-udemy\fundamentosProjetos
-
-# Desafio Versão Inicial
+# Shebang
 pi = 3.141519
 raio = 15.5
 

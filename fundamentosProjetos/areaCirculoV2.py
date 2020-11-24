@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Desafio Versão Inicial
+# Encoding
 pi = 3.141519
 raio = 15.5
 
