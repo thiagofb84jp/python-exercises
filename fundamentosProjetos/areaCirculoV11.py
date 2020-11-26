@@ -1,6 +1,12 @@
-# Adicionando retorno à função
+# Melhorando o help
 from math import pi
 import sys
+
+
+def help():
+    print("""\
+        É necessário informar o raio do círculo.
+        Sintaxe: {} <raio>""".format(sys.argv[0][2:]))
 
 
 def circulo(raio):
@@ -9,9 +15,7 @@ def circulo(raio):
 
 if (__name__ == '__main__'):
     if (len(sys.argv) < 2):
-        print("""\
-            É necessário informar o raio do círculo.
-            Sintaxe: {} <raio>""".format(sys.argv[0][2:]))
+        help()
     else:
         raio = sys.argv[1]
         area = circulo(raio)
