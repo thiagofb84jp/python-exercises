@@ -1,3 +1,8 @@
+'''
+>> Python Book first chapter
+Introducing Python basic concepts.
+'''
+
 print("Oi")
 print("Hello World")
 print("I love to program some language.")
