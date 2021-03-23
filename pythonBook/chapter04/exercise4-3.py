@@ -1,5 +1,5 @@
 """
-4.3. - Calcula velocidade do carro
+4.3. Calcula velocidade do carro
 """
 
 velocidade = int(input("Digite a velocidade do seu carro: "))
