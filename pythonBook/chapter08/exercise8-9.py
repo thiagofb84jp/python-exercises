@@ -1,11 +1,12 @@
-# 8.8. Cálculo do Fatorial
+# 8.8. Outra forma de realizar o cálculo do Fatorial
 
 def fatorial(n):
     fat = 1
+    x = 1
 
-    while n > 1:
-        fat *= n
-        n -= 1
+    while x <= n:
+        fat *= x
+        x += 1
 
     return fat
 

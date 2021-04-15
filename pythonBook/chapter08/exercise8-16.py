@@ -1,12 +1,9 @@
-# 8.7. Como não escrever uma função
+# 8.16. Reescrevendo o programa usando o 'for'
 
 def soma(L):
     total = 0
-    x = 0
-
-    while x < len(L):
-        total += L[x]
-        x += 1
+    for e in L:
+        total += e
 
     return total
 
