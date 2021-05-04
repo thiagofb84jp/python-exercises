@@ -91,6 +91,35 @@ def validaFaixaInteiro(pergunta, inicio, fim):
         except ValueError:
             print(f"Valor inválido, favor digitar entre {inicio} e {fim}")
 
-"""
->> CONTINUAR A CODIFICAÇÃO DA PÁGINA 204
-"""
+
+def menu():
+    print("""
+        1 - Novo
+        2 - Altera
+        3 - Apaga
+        4 - Lista
+        5 - Grava
+        6 - Lê
+
+        0 - Sai
+    """)
+    return validaFaixaInteiro("Escolha uma opção: ", 0, 6)
+
+
+while True:
+    opcao = menu()
+
+    if opcao == 0:
+        break
+    elif opcao == 1:
+        novo()
+    elif opcao == 2:
+        altera()
+    elif opcao == 3:
+        apaga()
+    elif opcao == 4:
+        lista()
+    elif opcao == 5:
+        grava()
+    elif opcao == 6:
+        le()

@@ -1,4 +1,4 @@
-# 9.16.
+# 9.16. Programa para gerar arquivo paginado
 
 LARGURA = 76
 LINHAS = 60
@@ -14,7 +14,32 @@ def verificaPagina(arquivo, linha, pagina):
     return linha, pagina
 
 
-"""
-Continuar o exercício na criação da função def escreve(arquivo, linha, nLinhas, pagina):
-https://python.nilo.pro.br/exercicios3/capitulo%2009/exercicio-9-7.html
-"""
+def escreve(arquivo, linha, nLinhas, pagina):
+    arquivo.write(linha + "\n")
+    return verificaPagina(arquivo, nLinhas + 1, pagina)
+
+
+entrada = open(NOME_DO_ARQUIVO, encoding="utf-8")
+saida = open("saida_paginada.txt", "w", encoding="utf-8")
+
+pagina = 1
+linhas = 1
+
+for linha in entrada.readlines():
+    palavras = linha.rstrip().split(" ")
+    linha = ""
+    for p in palavras:
+        p = p.strip()
+        if len(linha) + len(p) + 1 > LARGURA:
+            linhas, pagina = escreve(saida, linha, linhas, pagina)
+            linha = " "
+        linha += p + " "
+    if linha != "":
+        linhas, pagina = escreve(saida, linha, linhas, pagina)
+
+while(linhas != 1):
+    linhas, pagina = escreve(saida, "", linhas, pagina)
+
+
+entrada.close()
+saida.close()
