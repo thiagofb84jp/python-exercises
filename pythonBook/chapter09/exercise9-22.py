@@ -1,5 +1,11 @@
 # 9.22. Trocando de diretório
 
 import os
-os.chdir("e")
+os.chdir("a")
+print(os.getcwd())
+os.chdir("..")
+print(os.getcwd())
+os.chdir("b")
+print(os.getcwd())
+os.chdir("../c")
 print(os.getcwd())

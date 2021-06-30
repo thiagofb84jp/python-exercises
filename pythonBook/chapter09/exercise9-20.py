@@ -1,4 +1,5 @@
-# 9.19. Geração de uma página web a partir de um dicionário
+# -*- coding: utf-8 -*-
+# 9.20. Geração de uma página web a partir de um dicionário
 
 filmes = {
     "drama": ["Cidadão Kane", "O Poderoso Chefão"],
@@ -19,7 +20,7 @@ with open("filmes.html", "w", encoding="utf-8") as pagina:
     """)
 
     for c, v in filmes.items():
-        pagina.write(f"<h1>{c}</h1>\n")
+        pagina.write(f"<h1>{c}</h1>")
         for e in v:
             pagina.write(f"<h2>{e}</h2>\n")
 
