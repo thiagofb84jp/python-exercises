@@ -1,6 +1,7 @@
 # 9.24. Criando subdiretórios com o comando 'makedirs'
 
 # Criando novos subdiretórios de uma só vez
+import os.path
 import os
 os.makedirs("avô/pai/filho")
 os.makedirs("avó/mãe/filha")
@@ -19,3 +20,17 @@ open("moribundo.txt", "w").close()
 os.mkdir("vago")
 os.rmdir("vago")
 os.remove("moribundo.txt")
+
+# Exibe uma listagem (na horizontal) contendo todos os arquivos e diretórios
+print(os.listdir("."))
+print(os.listdir("avô"))
+print(os.listdir("avô/pai"))
+print(os.listdir("avó/mãe"))
+
+# Exibe a listagem (em forma de árvore) contendo todos os diretórios
+print("")
+for a in os.listdir("."):
+    if os.path.isdir(a):
+        print(f"{a}/")
+    elif os.path.isfile(a):
+        print(a)
